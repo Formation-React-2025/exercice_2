@@ -1,13 +1,13 @@
 import React from 'react';
-import Exercice2 from './components/exercices/exercice-2/Exercice2';
+import Exercice2Page from './features/exercice-2/pages/Exercice2Page';
 
 const App = () => (
   <main>
-    <Exercice2
+    <Exercice2Page
       title="Exercice 2"
     >
       <span>Hello world !</span>
-    </Exercice2>
+    </Exercice2Page>
 
   </main>
 );

@@ -1,7 +1,8 @@
 import React, { Children, } from 'react';
 import PropTypes from 'prop-types';
+import OnClickButton from '../components/on-click-button/OnClickButton';
 
-const Exercice2 = ({
+const Exercice2Page = ({
   title,
   children = undefined,
 }) => (
@@ -12,6 +13,8 @@ const Exercice2 = ({
 
     <section>
       {Children.map(children, (c) => c)}
+
+      <OnClickButton />
     </section>
 
     <footer>
@@ -28,9 +31,9 @@ const Exercice2 = ({
   </section>
 );
 
-Exercice2.propTypes = {
+Exercice2Page.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.node,
 };
 
-export default Exercice2;
+export default Exercice2Page;
