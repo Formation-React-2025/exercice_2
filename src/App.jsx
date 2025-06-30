@@ -1,9 +1,14 @@
 import React from 'react';
-import Exercice1Page from './features/exercices/exercice-1/Exercice1Page';
+import Exercice2Page from './features/exercice-2/pages/Exercice2Page';
 
 const App = () => (
   <main>
-    <Exercice1Page />
+    <Exercice2Page
+      title="Exercice 2"
+    >
+      <span>Hello world !</span>
+    </Exercice2Page>
+
   </main>
 );
 
