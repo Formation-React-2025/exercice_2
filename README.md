@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Formation React 2025
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Exercice 2 - Création d'un composant avec props
 
-## Available Scripts
+### 1 - Initialisation du projet
+Plusieurs possibilités :
+- Continuer sur le même projet
+- Télécharger le projet initialisé depuis le GitHub [Formation React 2025](https://github.com/orgs/Formation-React-2025/repositories) :
+  - ```git clone https://github.com/Formation-React-2025/exercice_2.git```
 
-In the project directory, you can run:
+### 2 - Création d'un composant avec des props
+- Lancer la commande ```npm install prop-types@15.8.1```.
 
-### `npm start`
+- Dans le package ```./src/features/exercice-2/pages```, créer le composant ```Exercice2Page``` dont le comportement est le même que le composant ```Exercice1Page``` aux différences suivantes :
+  -	Le titre du header est maintenant reçu en props
+  - Le titre est "Exercice 2 - Création d'un composant avec props"
+  -	Le contenu correspond à la props ```children```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Dans le fichier ```./src/App.jsx```, appeler le composant.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<u>Note :</u> par la suite, nous pourrons dupliquer ce composant dans ```./src/commons/components/layout/page-layout/PageLayout.jsx``` afin de le réutiliser.
 
-### `npm test`
+### 3 - Mise à jour de variable
+- Dans le package ```./src/features/exercice-2/components/on-click-button```, créer un composant `OnClickButton` :
+- Le composant initialise une variable locale à 0
+- Le composant déclare une fonction dont l'exécution incrémente la variable
+- La fonction doit afficher en console (`console.log(.)`) la valeur de la variable avant incrémentation et après incrémentation
+- Le composant retourne un bouton, qui, lorsque l’on clique dessus, exécute la fonction.
+- Le label du bouton est la variable
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Dans le composant `Exercice2Page`, appeler le composant `OnClickButton`, ouvrer la console du navigateur (`F12`) et cliquez sur bouton.
+- Que constatez-vous ?
